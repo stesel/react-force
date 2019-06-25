@@ -22,9 +22,10 @@
     "esModuleInterop": true,
     "declaration": true
   },
+  "include": ["src/**/*"],
   "exclude": [
     "node_modules",
     "lib",
-    "__tests__"
+    "src/__tests__"
   ]
 }

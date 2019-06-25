@@ -1,0 +1,25 @@
+language: node_js
+node_js: 11
+scripts:
+  - npm run install
+
+jobs:
+  include:
+    - stage: lint
+      name: Lint Rules
+      script: npm run lint
+    - stage: test
+      name: Unit Tests
+      script: npm run test
+    - stage: build
+      name: Build App
+      script: npm run build
+    - stage: deploy
+      name: Deploy App
+      before_deploy:
+        - npm run build
+      deploy:
+        provider: npm
+        email: "stesel23@gmail.com"
+        api_key: "NPM_AUTH_TOKEN"
+

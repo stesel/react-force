@@ -1,0 +1,32 @@
+{
+  "name": "react-force",
+  "version": "0.0.1",
+  "description": "An physics engine for React",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "homepage": "https://stesel.github.io/react-frame-rate-demo",
+  "repository": "git@github.com:stesel/react-force.git",
+  "author": "Leonid Trofymchuk <stesel23@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "react",
+    "physics",
+    "animation"
+  ],
+  "scripts": {
+    "build": "rm -rf ./lib && tsc",
+    "test": "jest",
+    "lint": "tslint --project ./tsconfig.json",
+    "coverage": "jest --coverage --coverageReporters=text-lcov | coveralls"
+  },
+  "dependencies": {
+    "react": "16.8.6"
+  },
+  "devDependencies": {
+    "@types/react": "16.8.6"
+  }
+}

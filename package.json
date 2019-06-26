@@ -1,7 +1,7 @@
 {
   "name": "react-with-force",
-  "version": "0.0.1",
-  "description": "An physics engine for React",
+  "version": "0.0.2",
+  "description": "A physics engine for React",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [

@@ -21,7 +21,7 @@ jobs:
       deploy:
         provider: npm
         email: "stesel23@gmail.com"
-        api_key: "NPM_AUTH_TOKEN"
+        api_key: NPM_AUTH_TOKEN
         skip_cleanup: true
         tag: alpha
         on:

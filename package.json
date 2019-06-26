@@ -12,6 +12,9 @@
   "author": "Leonid Trofymchuk <stesel23@gmail.com>",
   "license": "MIT",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "react",
     "physics",

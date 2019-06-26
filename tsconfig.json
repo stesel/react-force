@@ -27,6 +27,6 @@
     "node_modules",
     "lib",
     "src/__tests__",
-    "src/__example__",
+    "src/__example__"
   ]
 }

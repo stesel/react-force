@@ -5,13 +5,13 @@ scripts:
 jobs:
   include:
   - stage: build
-    name: Build Library
+    name: Build Lib
     script:
         - npm run lint
         - npm run test
         - npm run build
   - stage: deploy
-    name: Deploy App
+    name: Deploy Lib
     before_deploy:
     - yarn build
     deploy:

@@ -1,25 +1,31 @@
 language: node_js
 node_js: 11
 scripts:
-  - npm run install
+  - yarn
 
 jobs:
   include:
     - stage: lint
       name: Lint Rules
-      script: npm run lint
+      script: yarn run lint
     - stage: test
       name: Unit Tests
-      script: npm run test
+      script: yarn test
     - stage: build
       name: Build App
-      script: npm run build
+      script: yarn build
     - stage: deploy
       name: Deploy App
       before_deploy:
-        - npm run build
+        - yarn build
       deploy:
         provider: npm
         email: "stesel23@gmail.com"
         api_key: "NPM_AUTH_TOKEN"
+        skip_cleanup: true
+        tag: alpha
+        on:
+            branch: master
+
+
 

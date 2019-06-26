@@ -7,9 +7,9 @@ jobs:
   - stage: build
     name: Build Lib
     script:
-        - npm run lint
-        - npm run test
-        - npm run build
+        - yarn lint
+        - yarn test
+        - yarn build
   - stage: deploy
     name: Deploy Lib
     before_deploy:

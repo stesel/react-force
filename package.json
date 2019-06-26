@@ -1,6 +1,6 @@
 {
   "name": "react-with-force",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A physics engine for React",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -25,7 +25,8 @@
     "test": "jest",
     "lint": "tslint --project ./tsconfig.json",
     "coverage": "jest --coverage --coverageReporters=text-lcov | coveralls",
-    "docs": "docsify serve ./docs"
+    "docs": "docsify serve ./docs",
+    "start": "parcel src/__example__/index.html"
   },
   "dependencies": {
     "react": "16.8.6"
@@ -34,10 +35,12 @@
     "@types/enzyme": "3.9.4",
     "@types/jest": "24.0.15",
     "@types/react": "16.8.6",
+    "@types/react-dom": "16.8.4",
     "docsify": "4.9.4",
     "enzyme": "3.10.0",
     "enzyme-adapter-react-16": "1.14.0",
     "jest": "24.8.0",
+    "parcel-bundler": "1.12.3",
     "react-dom": "16.8.6",
     "ts-jest": "24.0.2",
     "tslint": "5.18.0",

@@ -22,3 +22,4 @@ jobs:
       tag: alpha
       on:
         branch: master
+        tags: true

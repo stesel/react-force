@@ -4,15 +4,12 @@ scripts:
 - yarn
 jobs:
   include:
-  - stage: lint
-    name: Lint Rules
-    script: yarn run lint
-  - stage: test
-    name: Unit Tests
-    script: yarn test
   - stage: build
-    name: Build App
-    script: yarn build
+    name: Build Library
+    script:
+        - npm run lint
+        - npm run test
+        - npm run build
   - stage: deploy
     name: Deploy App
     before_deploy:
@@ -20,10 +17,8 @@ jobs:
     deploy:
       provider: npm
       email: stesel23@gmail.com
+      api_key: $NPM_AUTH_TOKEN
       skip_cleanup: true
       tag: alpha
       on:
         branch: master
-      api_key:
-        secure:
-            ORFpgjEmapaVyLTcHbvHQ27yjNSoWgFO4i8kwlKjM/gqAQ80Gonas+6lkQ14i7pXyWTSmoABgVZCyXqTgydQA/OuXeYpbeInoHgqhHoYYtKhD9GZGtSVUUVY0VRRv41d2tH6JVYYeoybVIXKk8D8PN2jBz2KiK3hcsv6FvLP0DEkMbHikLiHOtPzjmJSqoT2s+SMaMOZ81XQxP9DKokLpgmil7vlk7BE5CjUI4YykKt0ysd4ROd/abEsKI5cs7SREn/yVeeBZDol3iat3H66PlvtUi4fPPHF/0jhI03qx5/4io3wIe29pkegRge5JJWugrq4PHhQYJt61Gijvdm0nbDOl7l8SORlI7XQQ0XLkxDLVR0oHI+54qHGngBspiFkde36lEL8TRpUQiUeo4FxgcRCMW18HT5qV6DsjHrqEdbxswIwvxMqy4ayOLhwYHO8vvPp+yB/x6HNpLByTAmDI+qtKw8VoUvxXBGGpHy9dNqvfECna/xgLSPU1W7HRqrO3YOMg1iEKCl2iEqRG0Q1BtmnQr7HQyoozppYbp9BSFUWUGnjNILYNpYGlTCv34VyQFodxLP4qZzk6foH11p3OK4CqxSuoQGJlJmTO5F6jDjI1AxXHIdHCbWyJYi5Sl5PyOlNe72MIJJhJja06/toyrWkhYoYbrNd81BMiCyexEU=

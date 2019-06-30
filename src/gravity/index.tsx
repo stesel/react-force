@@ -92,7 +92,7 @@ export interface Y {
  */
 type ConnectGravity = <A extends Y>(
     Component: React.ComponentType<A>,
-) => React.FunctionComponent<A>;
+) => React.FC<A>;
 
 /**
  * High order component for an effect of gravitation force.

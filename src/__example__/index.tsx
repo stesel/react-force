@@ -5,7 +5,7 @@ import {
     connectGravity,
     EARTH_GRAVITY_ACCELERATION,
     Gravity,
-} from "../gravity/Gravity";
+} from "../gravity";
 
 const App: React.FC = () => {
     const RectWithGravity = connectGravity(Rectangle);

@@ -65,7 +65,7 @@ export interface GravityProps {
 }
 
 /**
- * Wrapper-provider of gravitation acceleration for `React` children components.
+ * Wrapper-provider of gravitation acceleration for React children components.
  * @param props - { gravityAcceleration: number }(optional), default value - EARTH_GRAVITY_ACCELERATION.
  */
 export const Gravity: React.FC<GravityProps> = props => {

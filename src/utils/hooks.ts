@@ -24,7 +24,7 @@ export function useAnimation(callback: () => void) {
     }, [callbackRef]);
 }
 
-/***
+/**
  * Hook return times in milliseconds on each animation frame.
  */
 export function useAnimationTime() {

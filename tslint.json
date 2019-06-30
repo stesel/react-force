@@ -24,6 +24,9 @@
     ],
     "ordered-imports": [
       false
+    ],
+    "object-literal-shorthand": [
+      "never"
     ]
   },
   "rulesDirectory": []

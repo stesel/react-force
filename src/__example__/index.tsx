@@ -1,14 +1,19 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Rectangle } from "../primitives/Rectangle";
-import { Gravity } from "../gravity/Gravity";
+import {
+    connectGravity,
+    EARTH_GRAVITY_ACCELERATION,
+    Gravity,
+} from "../gravity/Gravity";
 
 const App: React.FC = () => {
+    const RectWithGravity = connectGravity(Rectangle);
     return (
         <section>
             <h1>React With Force!</h1>
-            <Gravity>
-                <Rectangle
+            <Gravity gravityAcceleration={EARTH_GRAVITY_ACCELERATION}>
+                <RectWithGravity
                     x={0}
                     y={0}
                     width={30}

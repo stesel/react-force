@@ -15,7 +15,7 @@ module.exports = {
         "^.+\\.tsx?$": "ts-jest"
     },
     "testMatch": [
-        "**/__tests__/*.(ts|tsx)"
+        "**/__tests__/**/*.(ts|tsx)"
     ],
     "coveragePathIgnorePatterns": [
         "test-setup.js",

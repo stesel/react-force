@@ -24,7 +24,7 @@
     "build": "rm -rf ./lib && tsc",
     "test": "jest",
     "lint": "tslint --project ./tsconfig.json",
-    "coverage": "jest --coverage --coverageReporters=text-lcov | coveralls",
+    "coverage": "jest --coverage",
     "docs": "docsify serve ./docs",
     "start": "parcel src/__example__/index.html"
   },

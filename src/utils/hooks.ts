@@ -4,18 +4,17 @@ import * as React from "react";
  * Hook executes callback on each animation frame.
  * @param callback - function which is executed on each animation frame.
  */
-export function useAnimation(callback: () => void) {
-    const callbackRef = React.useRef<() => void>(() => { /* empty */ });
-    callbackRef.current = callback;
+export function useAnimation(callback: (time: number) => void) {
+    const callbackRef = React.useRef<typeof callback>((time: number) => { /* empty */ });
     const frameRef = React.useRef<number>();
 
-    callbackRef.current = () => {
-        callback();
-        frameRef.current = requestAnimationFrame(callbackRef.current);
+    callbackRef.current = (time: number) => {
+        callback(time);
+        frameRef.current = window.requestAnimationFrame(callbackRef.current);
     };
 
     React.useEffect(() => {
-        frameRef.current = requestAnimationFrame(callbackRef.current);
+        frameRef.current = window.requestAnimationFrame(callbackRef.current);
         return () => {
             if (frameRef.current) {
                 window.cancelAnimationFrame(frameRef.current);

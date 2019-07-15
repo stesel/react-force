@@ -85,6 +85,7 @@ export const Gravity: React.FC<GravityProps> = props => {
  */
 export interface Y {
     y: number;
+    speedY: number;
 }
 
 /**
@@ -102,12 +103,14 @@ export const connectGravity: ConnectGravity = Component => {
     return props => {
         const gravityAcceleration = React.useContext(GravityContext);
         const y0 = props.y;
+        const speedY0 = props.speedY;
         const timeSec = msToSec(useAnimationTime());
-        const speedY = gravityAcceleration * timeSec;
+        const speedY = speedY0 + gravityAcceleration * timeSec;
         const y = y0 + speedY * timeSec;
         const mergedProps = {
             ...props,
             y: y,
+            speedY: speedY,
         };
         return <Component {...mergedProps} />;
     };

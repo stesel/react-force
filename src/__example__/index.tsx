@@ -15,7 +15,9 @@ const App: React.FC = () => {
             <Gravity gravityAcceleration={EARTH_GRAVITY_ACCELERATION}>
                 <RectWithGravity
                     x={0}
-                    y={0}
+                    y={200}
+                    speedX={0}
+                    speedY={-80}
                     width={30}
                     height={30}
                     rotation={45}

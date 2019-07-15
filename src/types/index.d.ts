@@ -8,12 +8,17 @@ export interface Coordinates {
     y: number;
 }
 
+export interface Speed {
+    speedX: number;
+    speedY: number;
+}
+
 export interface Rotation {
     rotation: number;
     pivotX: number;
     pivotY: number;
 }
 
-export interface RectangleProps extends Size, Coordinates, Rotation {
+export interface RectangleProps extends Size, Coordinates, Speed, Rotation {
     weight: number;
 }
